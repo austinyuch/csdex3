@@ -11,8 +11,14 @@ namespace TennisScore
     {
         public static String score(int playerOne, int playerTwo)
         {
-            //throw new NotImplementedException();
-            return "love all";
+            if (playerOne == 0)
+            {
+                return "love all";
+            }
+                return "fifteen all";
+            
+            
+
         }
     }
 }

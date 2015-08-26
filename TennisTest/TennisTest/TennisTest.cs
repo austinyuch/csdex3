@@ -12,6 +12,7 @@ namespace TennisScore
         public void score()
         {
             Assert.AreEqual("love all", Tennis.score(0,0));
+            Assert.AreEqual("fifteen all", Tennis.score(1,1));
         }
     }
 }
