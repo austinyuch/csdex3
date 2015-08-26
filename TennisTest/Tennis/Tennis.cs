@@ -13,11 +13,13 @@ namespace TennisScore
         {
             if (playerOne == 0)
             {
-                return "love all";
+                return "Love all";
             }
-                return "fifteen all";
-            
-            
+            if (playerOne == 1)
+            { 
+                return "Fifteen all";
+            }
+            return "Thirty all";
 
         }
     }
