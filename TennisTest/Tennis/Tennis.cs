@@ -9,15 +9,18 @@ namespace TennisScore
 {
     public class Tennis
     {
+        private static String[] equalDict = new String[] { "Love", "Fifteen", "Thirty","Forty"};
+
         public static String score(int playerOne, int playerTwo)
         {
-            if (playerOne == 0)
-                return "Love all";
+
             if (playerOne == 1)
-                return "Fifteen all";
-            if (playerOne == 2)          
-                return "Thirty all";
-            return "Forty all";
+                return equalDict[1] + " all";
+            if (playerOne == 2)
+                return equalDict[2] + " all";
+            if (playerOne == 3)          
+                return equalDict[3] + " all";
+            return "Love all";
 
         }
     }
