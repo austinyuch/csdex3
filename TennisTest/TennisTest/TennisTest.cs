@@ -14,6 +14,7 @@ namespace TennisScore
             Assert.AreEqual("Love all", Tennis.score(0,0));
             Assert.AreEqual("Fifteen all", Tennis.score(1,1));
             Assert.AreEqual("Thirty all", Tennis.score(2,2));
+            Assert.AreEqual("Forty all", Tennis.score(3, 3));
         }
     }
 }

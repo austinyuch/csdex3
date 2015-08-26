@@ -12,14 +12,12 @@ namespace TennisScore
         public static String score(int playerOne, int playerTwo)
         {
             if (playerOne == 0)
-            {
                 return "Love all";
-            }
             if (playerOne == 1)
-            { 
                 return "Fifteen all";
-            }
-            return "Thirty all";
+            if (playerOne == 2)          
+                return "Thirty all";
+            return "Forty all";
 
         }
     }
