@@ -12,9 +12,10 @@ namespace TennisScore
         private static String[] equalDict = new String[] { "Love", "Fifteen", "Thirty","Forty"};
 
         public static String score(int playerOne, int playerTwo)
-        {
-            return equalDict[playerOne] + " all"; 
-
+        {   
+            if (playerOne == playerTwo)
+                return equalDict[playerOne] + " all";
+            return "Fifteen Love";
         }
     }
 }
