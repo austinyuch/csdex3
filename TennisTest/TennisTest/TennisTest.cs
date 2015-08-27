@@ -23,6 +23,12 @@ namespace TennisScore
             Assert.AreEqual("Thirty Love", Tennis.score(2, 0));
             
         }
+        [Test]
+        public void win()
+        {
+            Assert.AreEqual("Player one win", Tennis.score(4, 2));
+        }
+
 
     }
 }

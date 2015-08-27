@@ -13,7 +13,11 @@ namespace TennisScore
 
         public static String score(int playerOne, int playerTwo)
         {   
-            if (playerOne != 0 && playerTwo == 0)
+            if (playerOne == 4)
+            {
+                return "Player one win";
+            }
+            if (playerOne != playerTwo)
                 return dictionary[playerOne] + " Love";
             return dictionary[playerOne] + " all";
         }
