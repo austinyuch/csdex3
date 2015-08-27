@@ -20,7 +20,8 @@ namespace TennisScore
         public void diffScore()
         {
             Assert.AreEqual("Fifteen Love", Tennis.score(1, 0));
-
+            Assert.AreEqual("Thirty Love", Tennis.score(2, 0));
+            
         }
 
     }
