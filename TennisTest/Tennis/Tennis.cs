@@ -27,10 +27,13 @@ namespace TennisScore
             if (playerOne < playerTwo)
                 return winnable(playerTwo, playerOne, "Player two");
             if (playerOne - playerTwo == 1)
-                return winnerName + " advantage";
+                //return winnerName + " advantage";
+                return String.Format("{0} advantage", winnerName);
             if (playerOne == playerTwo)
-                return "Deuce";
-            return winnerName + " win";
+                //return "Deuce";
+                return String.Format("Deuce", winnerName);
+            //return winnerName + " win";
+            return String.Format("{0} win", winnerName);
             //throw new NotImplementedException();
         }
     }
