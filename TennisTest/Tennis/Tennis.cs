@@ -10,28 +10,28 @@ namespace TennisScore
     public class Tennis
     {
         private static String[] dictionary = new String[] { "Love", "Fifteen", "Thirty","Forty"};
-        private static string winnable(int playerOne, int playerTwo)
-        {
-            if (playerOne - playerTwo == 1)
-                return "Player one" + " advantage";
-            if (playerOne == playerTwo)
-                return "Deuce";
-            return "Player one" + " win";
-            //throw new NotImplementedException();
-        }
 
         public static String score(int playerOne, int playerTwo)
         {   
             if (playerOne >= 4 || playerTwo >= 4)
             {
-                return winnable(playerOne, playerTwo);
-              
+                return winnable(playerOne, playerTwo, "Player one");              
             }
             if (playerOne != playerTwo)
                 return dictionary[playerOne] + " Love";
             return dictionary[playerOne] + " all";
         }
 
-       
+        private static string winnable(int playerOne, int playerTwo, String winnerName)
+        {
+            if (playerOne < playerTwo)
+                return winnable(playerTwo, playerOne, "Player two");
+            if (playerOne - playerTwo == 1)
+                return winnerName + " advantage";
+            if (playerOne == playerTwo)
+                return "Deuce";
+            return winnerName + " win";
+            //throw new NotImplementedException();
+        }
     }
 }

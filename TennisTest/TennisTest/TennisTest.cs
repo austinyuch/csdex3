@@ -27,7 +27,7 @@ namespace TennisScore
         public void win()
         {
             Assert.AreEqual("Player one win", Tennis.score(4, 2));
-           // Assert.AreEqual("Player two win", Tennis.score(2, 4));
+            Assert.AreEqual("Player two win", Tennis.score(2, 4));
         }
 
         [Test]
