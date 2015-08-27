@@ -13,7 +13,7 @@ namespace TennisScore
 
         public static String score(int playerOne, int playerTwo)
         {   
-            if (playerOne == 4)
+            if (playerOne >= 4 || playerTwo >= 4)
             {
                 if (playerOne - playerTwo == 1)
                     return "Player one" + " advantage";
