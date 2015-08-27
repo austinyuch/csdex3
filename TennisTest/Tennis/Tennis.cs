@@ -18,7 +18,7 @@ namespace TennisScore
                 return winnable(playerOne, playerTwo, "Player one");              
             }
             if (playerOne != playerTwo)
-                return dictionary[playerOne] + " Love";
+                return dictionary[playerOne] +" "+ dictionary[playerTwo];
             return dictionary[playerOne] + " all";
         }
 
@@ -26,15 +26,7 @@ namespace TennisScore
         {
             if (playerOne < playerTwo)
                 return winnable(playerTwo, playerOne, "Player two");
-            if (playerOne - playerTwo == 1)
-                //return winnerName + " advantage";
-                return String.Format("{0} advantage", winnerName);
-            if (playerOne == playerTwo)
-                //return "Deuce";
-                return String.Format("Deuce", winnerName);
-            //return winnerName + " win";
-            return String.Format("{0} win", winnerName);
-            //throw new NotImplementedException();
+            return String.Format(new string[] { "Deuce", "{0} advantage", "{0} win" }[playerOne - playerTwo], winnerName);
         }
     }
 }

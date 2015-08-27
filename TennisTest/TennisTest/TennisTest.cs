@@ -21,7 +21,9 @@ namespace TennisScore
         {
             Assert.AreEqual("Fifteen Love", Tennis.score(1, 0));
             Assert.AreEqual("Thirty Love", Tennis.score(2, 0));
-            
+            //exhausted test
+            Assert.AreEqual("Love Thirty", Tennis.score(0, 2));
+            //Assert.AreEqual("Thirty Love", Tennis.score(0, 2));
         }
         [Test]
         public void win()
