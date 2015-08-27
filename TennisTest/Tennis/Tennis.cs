@@ -15,7 +15,11 @@ namespace TennisScore
         {   
             if (playerOne == 4)
             {
-                return "Player one win";
+                if (playerOne - playerTwo == 1)
+                    return "Player one" + " advantage";
+                if (playerOne == playerTwo)
+                    return "Deuce";
+                return "Player one" + " win";
             }
             if (playerOne != playerTwo)
                 return dictionary[playerOne] + " Love";
